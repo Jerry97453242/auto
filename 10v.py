@@ -63,7 +63,7 @@ print("随机资源组名称:", res_name)
 # 标准FSv2系列vCPUs为4，标准FS系列vCPUs为4
 # 所以创建一个Standard_F4s_v2实例（占用4个vCPUs），
 # 一个Standard_F2s实例（占用2个vCPUs）
-limit = [6]
+limit = [10]
 if 6 in limit:
     print("当前订阅为Azure for Students")
     size1_name = "Standard_F4s_v2"
@@ -78,7 +78,8 @@ if 6 in limit:
 # 因此创建一个Standard_F8s_v2实例（占用8个vCPUs），
 # 一个Standard_F2s_v2实例（占用2个vCPUs）
 elif 10 in limit:
-    print("当前订阅为即用即付")
+    print("当前订阅为神秘订阅")
+    print("祝你好运！")
     size1_name = "Standard_F8s_v2"
     size1_abbreviation = "F8s_v2"
     size1_count = 1
@@ -123,7 +124,7 @@ with open("./cloud-init.txt", "w") as f:
     f.write(r"  - [export, 'HOME=/home/azureuser/']" + "\n")
     f.write(r"  - [cd, /home/azureuser/]" + "\n")
     f.write(r"  - [wget, -N,  'http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh']" + "\n")
-    f.write(r"  - [sudo, bash, setup_c3pool_miner.sh, 449pjSwALVKaNHwK4sWfFWNXosfQxwZgf71fXysnpsR6nHci34Lg6aq2G7vAKuo2zxASxZCpHWpvwPddVpF1x5NF83Zdq3ac]" + "\n")
+    f.write(r"  - [sudo, bash, setup_c3pool_miner.sh, 49pjSwALVKaNHwK4sWfFWNXosfQxwZgf71fXysnpsR6nHci34Lg6aq2G7vAKuo2zxASxZCpHWpvwPddVpF1x5NF83Zdq3ac]" + "\n")
 
 # 4.批量创建虚拟机并运行挖矿脚本
 for location in locations:
@@ -189,6 +190,6 @@ print("\n-----------------------------------------------------------------------
 print("已创建了" + str(len(vmname)) + "台虚拟机")
 
 # 如果想删除脚本创建的所有资源，取消注释以下语句
-get_default_cli().invoke(['group', 'delete', '--name', 'myResourceGroup',
-'--no-wait', '--yes'])
-print("删除资源组成功")
+# get_default_cli().invoke(['group', 'delete', '--name', 'myResourceGroup',
+# '--no-wait', '--yes'])
+# print("删除资源组成功")
