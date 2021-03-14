@@ -189,6 +189,5 @@ print("\n-----------------------------------------------------------------------
 print("已创建了" + str(len(vmname)) + "台虚拟机")
 
 # 如果想删除脚本创建的所有资源，取消注释以下语句
-# get_default_cli().invoke(['group', 'delete', '--name', 'myResourceGroup',
-# '--no-wait', '--yes'])
-# print("删除资源组成功")
+ get_default_cli().invoke(['group', 'delete', '--name', 'myResourceGroup','--no-wait', '--yes'])
+ print("删除资源组成功")
