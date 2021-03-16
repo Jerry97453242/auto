@@ -80,11 +80,11 @@ if 6 in limit:
 elif 10 in limit:
     print("当前订阅为神秘订阅")
     print("祝你好运！")
-    size1_name = "Standard_D8as_v4"
-    size1_abbreviation = "D8as_v4"
+    size1_name = "Standard_F8"
+    size1_abbreviation = "F8"
     size1_count = 1
-    size2_name = "Standard_D2as_v4"
-    size2_abbreviation = "D2as_v4"
+    size2_name = "Standard_F2"
+    size2_abbreviation = "F2"
     size2_count = 1
     account_type = 1
 
