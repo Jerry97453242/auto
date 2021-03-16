@@ -80,11 +80,11 @@ if 6 in limit:
 elif 10 in limit:
     print("当前订阅为神秘订阅")
     print("祝你好运！")
-    size1_name = "Standard_F8s_v2"
-    size1_abbreviation = "F8s_v2"
+    size1_name = "Standard_D8as_v4"
+    size1_abbreviation = "D8as_v4"
     size1_count = 1
-    size2_name = "Standard_F2s_v2"
-    size2_abbreviation = "F2s_v2"
+    size2_name = "Standard_D2as_v4"
+    size2_abbreviation = "D2as_v4"
     size2_count = 1
     account_type = 1
 
@@ -135,18 +135,18 @@ for location in locations:
     # westcentralus 区域不支持 FSv2 系列，
     # Azure for Students订阅不支持 F/FS 系列
     if location == "westcentralus" and account_type == 0:
-        size1_name = "Standard_D4ds_v4"
-        size1_abbreviation = "D4ds_v4"
-        size2_name = "Standard_D2s_v4"
-        size2_abbreviation = "D2s_v4"
+        size1_name = "Standard_D8as_v4"
+        size1_abbreviation = "D8ds_v4"
+        size2_name = "Standard_D2as_v4"
+        size2_abbreviation = "D2as_v4"
     if location == "westcentralus" and account_type == 1:
-        size1_name = "Standard_F8s"
-        size1_abbreviation = "F8s"
-        size2_name = "Standard_F2s"
-        size2_abbreviation = "F2s"
+        size1_name = "Standard_D8as_v4"
+        size1_abbreviation = "D8as_v4"
+        size2_name = "Standard_D2as_v4"
+        size2_abbreviation = "D2as_v4"
     if location == "westcentralus" and account_type == 2:
-        size1_name = "Standard_F4s"
-        size1_abbreviation = "F4s"
+        size1_name = "Standard_D8as_v4"
+        size1_abbreviation = "D2as_v4"
 
     count = 0
     for a in range(0, size1_count):
