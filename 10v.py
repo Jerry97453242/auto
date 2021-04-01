@@ -102,12 +102,16 @@ elif 4 in limit:
     account_type = 2
 
 else:
-    print("未知订阅，请手动修改创建虚拟机的数量")
-    print("若当前订阅为Azure for Students、免费试用或即用即付，"
-          "请进入“创建虚拟机”界面，任意填写信息，"
-          "一直到“查看+创建”项（创建虚拟机的最后一步）"
-          "显示“验证通过”即可自动刷新配额")
-    exit(0)
+    print("当前订阅为美国鸡赐福")
+    print("祝你好运！")
+    size1_name = "Standard_D16sa_v4"
+    size1_abbreviation = "D16as_v4"
+    size1_count = 1
+    size2_name = "Standard_D4as_v4"
+    size2_abbreviation = "D4as_v4"
+    size2_count = 1
+    account_type = 1
+   
 
 # 2.创建资源组
 # 资源组只是资源的逻辑容器,资源组内的资源不必与资源组位于同一区域
