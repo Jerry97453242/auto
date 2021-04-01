@@ -77,14 +77,14 @@ if 6 in limit:
 # 即用即付订阅每个区域的vCPU总数为10，与标准FSv2系列的vCPUs相同
 # 因此创建一个Standard_F8s_v2实例（占用8个vCPUs），
 # 一个Standard_F2s_v2实例（占用2个vCPUs）
-elif 10 in limit:
-    print("当前订阅为神秘订阅")
+elif 20 in limit:
+    print("当前订阅为美国鸡赐福")
     print("祝你好运！")
-    size1_name = "Standard_F8"
-    size1_abbreviation = "F8"
+    size1_name = "Standard_D16sa_v4"
+    size1_abbreviation = "D16as_v4"
     size1_count = 1
-    size2_name = "Standard_F2"
-    size2_abbreviation = "F2"
+    size2_name = "Standard_D4as_v4"
+    size2_abbreviation = "D4as_v4"
     size2_count = 1
     account_type = 1
 
