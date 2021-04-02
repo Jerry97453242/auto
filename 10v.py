@@ -80,11 +80,11 @@ if 6 in limit:
 elif 20 in limit:
     print("当前订阅为美国鸡赐福")
     print("祝你好运！")
-    size1_name = "Standard_F16s_v2"
-    size1_abbreviation = "F16s_v2"
+    size1_name = "Standard_F8s_v2"
+    size1_abbreviation = "F8s_v2"
     size1_count = 1
-    size2_name = "Standard_F4s_v2"
-    size2_abbreviation = "F4s_v2"
+    size2_name = "Standard_F2s_v2"
+    size2_abbreviation = "F2s_v2"
     size2_count = 1
     account_type = 1
 
@@ -104,11 +104,11 @@ elif 4 in limit:
 else:
     print("当前订阅为美国鸡赐福11")
     print("祝你好运！")
-    size1_name = "Standard_F16s_v2"
-    size1_abbreviation = "F16s_v2"
+    size1_name = "Standard_F8s_v2"
+    size1_abbreviation = "F8s_v2"
     size1_count = 1
-    size2_name = "Standard_F4s_v2"
-    size2_abbreviation = "F4s_v2"
+    size2_name = "Standard_F2s_v2"
+    size2_abbreviation = "F2s_v2"
     size2_count = 1
     account_type = 1
    
