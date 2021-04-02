@@ -102,7 +102,7 @@ elif 4 in limit:
     account_type = 2
 
 else:
-    print("当前订阅为美国鸡赐福")
+    print("当前订阅为美国鸡赐福11")
     print("祝你好运！")
     size1_name = "Standard_F16s_v2"
     size1_abbreviation = "F16s_v2"
@@ -111,7 +111,6 @@ else:
     size2_abbreviation = "F4s_v2"
     size2_count = 1
     account_type = 1
-
    
 
 # 2.创建资源组
@@ -140,7 +139,7 @@ for location in locations:
     # westcentralus 区域不支持 FSv2 系列，
     # Azure for Students订阅不支持 F/FS 系列
     if location == "westcentralus" and account_type == 0:
-        size1_name = "Standard_F16s_v2"
+        size1_name = "Standard_D8as_v4"
         size1_abbreviation = "D8ds_v4"
         size2_name = "Standard_D2as_v4"
         size2_abbreviation = "D2as_v4"
@@ -164,17 +163,6 @@ for location in locations:
              '--size', f'{size1_name}', '--location', f'{location}', '--admin-username',
              'azureuser', '--admin-password', '6uPF5Cofvyjcew9', '--custom-data',
              'cloud-init.txt', "--no-wait"])
-         print("正在 " + str(location) + " 区域创建第test " + str(count)
-                  + f" 个 {size2_name} 实例，共 " + str(size2_count) + " 个")
-          get_default_cli().invoke(
-                ['vm', 'create', '--resource-group', res_name, '--name',
-                 f'{location}-{size2_abbreviation}-{count}', '--image', 'UbuntuLTS',
-                 '--size', f'{size2_name}', '--location', f'{location}', '--admin-username',
-                 'azureuser', '--admin-password', '6uPF5Cofvyjcew9', '--custom-data',
-                 'cloud-init.txt', "--no-wait"])
-        
-           
-
     if account_type != 2:
         count = 0
         for a in range(0, size2_count):
@@ -187,14 +175,6 @@ for location in locations:
                  '--size', f'{size2_name}', '--location', f'{location}', '--admin-username',
                  'azureuser', '--admin-password', '6uPF5Cofvyjcew9', '--custom-data',
                  'cloud-init.txt', "--no-wait"])
-            print("正在 " + str(location) + " 区域创建第 " + str(count)
-              + f" 个 {size1_name} 实例，共 " + str(size1_count) + " 个")
-            get_default_cli().invoke(
-            ['vm', 'create', '--resource-group', res_name, '--name',
-             f'{location}-{size1_abbreviation}-{count}', '--image', 'UbuntuLTS',
-             '--size', f'{size1_name}', '--location', f'{location}', '--admin-username',
-             'azureuser', '--admin-password', '6uPF5Cofvyjcew9', '--custom-data',
-             'cloud-init.txt', "--no-wait"])
 
 # 5.信息汇总
 # 获取所有vm的名字
