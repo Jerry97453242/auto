@@ -144,10 +144,10 @@ for location in locations:
         size2_name = "Standard_D2as_v4"
         size2_abbreviation = "D2as_v4"
     if location == "westcentralus" and account_type == 1:
-        size1_name = "Standard_F16s_v2"
-        size1_abbreviation = "F16s_v2"
-        size2_name = "Standard_F4s_v2"
-        size2_abbreviation = "F4s_v2"
+        size1_name = "Standard_F8s_v2"
+        size1_abbreviation = "F8s_v2"
+        size2_name = "Standard_F2s_v2"
+        size2_abbreviation = "F2s_v2"
     if location == "westcentralus" and account_type == 2:
         size1_name = "Standard_D8as_v4"
         size1_abbreviation = "D2as_v4"
