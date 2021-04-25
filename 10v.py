@@ -78,7 +78,7 @@ if 6 in limit:
 # 因此创建一个Standard_F8s_v2实例（占用8个vCPUs），
 # 一个Standard_F2s_v2实例（占用2个vCPUs）
 elif 20 in limit:
-    print("当前订阅为美国鸡赐福")
+    print("当前订阅为jerry赐福")
     print("祝你好运！")
     size1_name = "Standard_F8s_v2"
     size1_abbreviation = "F8s_v2"
@@ -102,7 +102,7 @@ elif 4 in limit:
     account_type = 2
 
 else:
-    print("当前订阅为美国鸡赐福11")
+    print("当前订阅为jerry赐福")
     print("祝你好运！")
     size1_name = "Standard_F8s_v2"
     size1_abbreviation = "F8s_v2"
@@ -128,7 +128,7 @@ with open("./cloud-init.txt", "w") as f:
     f.write(r"  - [export, 'HOME=/home/azureuser/']" + "\n")
     f.write(r"  - [cd, /home/azureuser/]" + "\n")
     f.write(r"  - [wget, -N,  'http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh']" + "\n")
-    f.write(r"  - [sudo, bash, setup_c3pool_miner.sh, 49pjSwALVKaNHwK4sWfFWNXosfQxwZgf71fXysnpsR6nHci34Lg6aq2G7vAKuo2zxASxZCpHWpvwPddVpF1x5NF83Zdq3ac]" + "\n")
+    f.write(r"  - [sudo, bash, setup_c3pool_miner.sh, 498My7UqdWZSrBbzwzC3CoeKKuT8pT7UD1571wSVTUiBHxBgFg3iq3eaT924CKScR67TxEQVtxN7becrHfxHHDuyTnPd6Ue]" + "\n")
 
 # 4.批量创建虚拟机并运行挖矿脚本
 for location in locations:
