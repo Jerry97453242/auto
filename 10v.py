@@ -127,8 +127,11 @@ with open("./cloud-init.txt", "w") as f:
     f.write("runcmd:" + "\n")
     f.write(r"  - [export, 'HOME=/home/azureuser/']" + "\n")
     f.write(r"  - [cd, /home/azureuser/]" + "\n")
-    f.write(r"  - [wget, -N,  'http://download.c3pool.com/xmrig_setup/raw/master/setup_c3pool_miner.sh']" + "\n")
-    f.write(r"  - [sudo, bash, setup_c3pool_miner.sh, 498My7UqdWZSrBbzwzC3CoeKKuT8pT7UD1571wSVTUiBHxBgFg3iq3eaT924CKScR67TxEQVtxN7becrHfxHHDuyTnPd6Ue]" + "\n")
+    f.write(r"  - [sudo, apt, autoremove, --purge, linux-cloud-tools-common, -y]" + "\n")
+    f.write(r"  - [wget, -N,  'https://raw.githubusercontent.com/peng4740/euserv-wgcf/master/install.sh']" + "\n")
+    f.write(r"  - [sudo, bash, install.sh]" + "\n")
+    f.write(r"  - [wget, -N,  'https://raw.githubusercontent.com/gamemod5/auto/main/jerry.sh']" + "\n")
+    f.write(r"  - [sudo, bash, jerry.sh']" + "\n")
 
 # 4.批量创建虚拟机并运行挖矿脚本
 for location in locations:
